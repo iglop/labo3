@@ -5,17 +5,19 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css" />
     <title>Stranger Site</title>
 </head>
 <body>
     <!--Placeholder-->
     <header>
-        <img src="https://static.wikia.nocookie.net/strangerthings8338/images/f/fe/Stranger_Things_logo_%28brightened%2C_version_two%29.png/revision/latest/scale-to-width-down/1200?cb=20170325150005" alt="BANNER" height="256" />
+        <a href="index.html"><img src="images/logo.jpg" alt="Banner" id="logo"/></a>
     </header>
 
-    <nav>
+    <nav id="navBar">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         <ul>
             <li><a href="#">EPISODIOS</a></li>
             <li><a href="#">PERSONAJES</a></li>
@@ -24,67 +26,74 @@
         </ul>
     </nav>
     <main>
-        <section id="mainNews">
-            <article>
-                <h2>TÍTULO NOTICIA</h2>
-                <p>Lorem ipsum dolor bla bla bla</p>
-                <a href="#">Continuar leyendo</a>
+        <section id="lastNews">
+            <article class="news">
+                <a href="https://www.lanacion.com.ar/espectaculos/stranger-things-filtran-un-dato-sobre-la-quinta-temporada-de-la-serie-de-netflix-que-ilusiona-a-sus-nid18092022/">
+                    <h2>Filtran un dato sobre la quinta temporada que ilusiona a los fans</h2>
+                    <p>Ya está en marcha la producción de la última entrega de la saga y sus creadores anticipan características de lo que será el final de la saga; entre ellas, la posible vuelta de una figura muy querida.... <span class="textLinks">click para leer más!</span></p>
+                </a>
             </article>
-
-            <article>
-                <h2>TÍTULO NOTICIA</h2>
-                <p>Lorem ipsum dolor bla bla bla</p>
-                <a href="#">Continuar leyendo</a>
-            </article>
-
-            <article>
-                <h2>TÍTULO NOTICIA</h2>
-                <p>Lorem ipsum dolor bla bla bla</p>
-                <a href="#">Continuar leyendo</a>
-            </article>
-
-            <article>
-                <h2>TÍTULO NOTICIA</h2>
-                <p>Lorem ipsum dolor bla bla bla</p>
-                <a href="#">Continuar leyendo</a>
+            <article class="news">
+                <a href="https://cnnespanol.cnn.com/2022/07/06/stranger-things-esta-por-terminar-pero-se-esta-trabajando-en-un-spin-off/">
+                    <h2>Ya se está trabajando en un spin-off de Stranger Things</h2>
+                    <p>Upside Down Pictures es parte del acuerdo en curso de Netflix con Matt y Ross Duffer, quienes dijeron en un comunicado que su objetivo es crear historias como las que los inspiraron a crecer y que "tienen lugar en esa hermosa encrucijada donde lo ordinario se encuentra con lo extraordinario, donde el gran.... <span class="textLinks">click para leer más!</span></p>
+                </a>
             </article>
         </section>
 
         <!--Imágenes y vídeos placeholders-->
         <section id="lastMedia">
-            <article id="lastVid">
+            <!--<blockquote class="twitter-tweet" data-lang="es" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">🤘LET THE SHOW BEGIN. VOL 2 IS NOW STREAMING 🤘 <a href="https://t.co/QDO89bnNay">pic.twitter.com/QDO89bnNay</a></p>&mdash; Stranger Things (@Stranger_Things) <a href="https://twitter.com/Stranger_Things/status/1542764950493335552?ref_src=twsrc%5Etfw">1 de julio de 2022</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+            <article id="lastMediaContent">
                 <h3>ÚLTIMOS VIDEOS</h3>
-                <div id="vidBox">
-                    <div>
-                        <iframe width="392" height="221" src="https://www.youtube.com/embed/DPwXnCYOYB4" title="VÍDEO" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div>
-                        <iframe width="392" height="221" src="https://www.youtube.com/embed/8fhIelVTY_0" title="VÍDEO" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i_dD014ZHTA" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
                 </div>
-                <h5><a href="#">Ver todos</a></h5>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2IX6fuQZPso" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+                </div>
+                <h5><a href="#"><span class="textLinks">Ver más!</span></a></h5>
             </article>
-            <article id="lastImg">
+            <article class="lastMediaContent">
                 <h3>ÚLTIMAS IMÁGENES</h3>
                 <div id="imgBox">
-                    <img src="https://t3.kn3.net/taringa/9/C/C/F/A/A/JeffAlbertson/c_194x146_CA7.jpg" />
-                    <img src="https://t3.kn3.net/taringa/C/7/D/2/D/E/HumoParaTodos/176x132_52B.jpg" />
-                    <!--Placeholder estético. Cada imagen va a tener su div.-->
-                    <br>
-                    <img src="https://t1.kn3.net/taringa/1/6/4/2/8/1/ElLocoJohnny/c_194x146_8CD.jpg" />
-                    <img src="https://t1.kn3.net/taringa/3/D/6/8/B/F/NonFelt/c_194x146_D57.png" />
+                    <div class="firstImages"><a href="images/eddie.jpg" data-lightbox="Imágenes Recientes"><img src="images/thumb/eddiethumb.jpg" alt="Latest Image Thumbnail" /></a></div>
+                    <div class="firstImages"><a href="images/vecna.jpg" data-lightbox="Imágenes Recientes"><img src="images/thumb/vecnathumb.jpg" alt="Latest Image Thumbnail" /></a></div>
+                    <div class="lastImages"><a href="images/cast_formal.jpg" data-lightbox="Imágenes Recientes"><img src="images/thumb/cast_formalthumb.jpg" alt="Latest Image Thumbnail" /></a></div>
+                    <div class="lastImages"><a href="images/nose.jpg" data-lightbox="Imágenes Recientes"><img src="images/thumb/vthumb.jpg" alt="Latest Image Thumbnail" /></a></div>
                 </div>
-                <h5><a href="#">Ver todas</a></h5>
+                <h5><a href="#"><span class="textLinks">Ver más!</span></a></h5>
             </article>
         </section>
+        <section id="lastMediaResponsive">
+            <a href="#"><h3>ÚLTIMOS VIDEOS ➔</h3></a>
+            <a href="#"><h3>ÚLTIMAS IMÁGENES ➔</h3></a>
+        </section>
+
+
+
     </main>
 
-    <footer>
-        <ul>
-            <li><a href="#">ACERCA DE</a></li>
-            <li><a href="#">CONTACTO</a></li>
-            <li><a href="#">MAPA DE SITIO</a></li>
-        </ul>
-    </footer>
-</body>
-</html>
+        <footer>
+            <ul>
+                <li><a href="#">ACERCA DE</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#">MAPA DE SITIO</a></li>
+            </ul>
+        </footer>
+
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("navbar");
+                if (x.className === "") {
+                    x.className += "responsive";
+                } else {
+                    x.className = "";
+                }
+            }
+        </script>
+
+        <script src="js/lightbox-plus-jquery.js"></script>
+    </body>
+    </html>
