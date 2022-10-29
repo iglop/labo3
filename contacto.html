@@ -3,53 +3,82 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css" />
     <title>Stranger Site</title>
 </head>
 <body>
-    <!--Placeholder-->
-    <header>
-        <img src="https://static.wikia.nocookie.net/strangerthings8338/images/f/fe/Stranger_Things_logo_%28brightened%2C_version_two%29.png/revision/latest/scale-to-width-down/1200?cb=20170325150005" alt="BANNER" height="256" />
-    </header>
+    <div id="background">
+        <header>
+            <a href="index.html"><img src="images/logo.jpg" alt="Banner" id="logo" /></a>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Episodios</a></li>
-            <li><a href="#">Personajes</a></li>
-            <li><a href="#">Historia</a></li>
-            <li><a href="#">Media</a></li>
-        </ul>
-    </nav>
+        <nav id="navBar">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="images/threeBarMenu.png" class="threeBarMenu" alt="Mobile Menu"></a>
+            <ul>
+                <li><a href="episodios.html">EPISODIOS</a></li>
+                <li><a href="personajes.html">PERSONAJES</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="content">
+                <h2>CONTACTO</h2>
+                <form action="#" method="GET">
+                    <label for="consulta">Por favor, indique el motivo:</label>
+                    </br>
+                    <select name="consulta" id="consultaID">
+                        <option value="consulta">Quiero hacer una consulta</option>
+                        <option value="queja">Algo en la página no me gustó</option>
+                        <option value="sugerencia">Algo en la página puede mejorarse</option>
+                        <option value="opinion">Opinión sobre la página</option>
+                    </select>
+                    </br>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombreID">
+                    </br>
+                    <label for="mensaje">
+                        Mensaje:</br>
+                        <textarea rows="10" cols="60" name="mensaje" id="mensajeID"></textarea>
+                    </label>
+                    </br>
+                    <input type="checkbox" name="tyc" id="tycID">
+                    <label for="tyc">He leído y acepto los términos y condiciones</label>
+                    </br>
+                    <input type="submit" value="Enviar" id="enviarID">
+                </form>
+            </section>
+        </main>
 
-	<h2>CONTACTO</h2>
-	<form action="#" method="GET">
-		<label for="consulta">Por favor, indique el motivo:</label>
-		</br>
-		<select name="consulta" id="consultaID">
-			<option value="consulta">Quiero hacer una consulta</option>
-			<option value="queja">Algo en la página no me gustó</option>
-			<option value="sugerencia">Algo en la página puede mejorarse</option>
-			<option value="opinion">Opinión sobre la página</option>
-		</select>
-		</br>
-		<label for="nombre">Nombre:</label>
-		<input type="text" name="nombre" id="nombreID">
-		</br>
-		<label for="mensaje">Mensaje:</br>
-		<textarea rows="10" cols="60" name="mensaje" id="mensajeID"></textarea>
-		</label>
-		</br>
-		<input type="checkbox" name="tyc" id="tycID">
-		<label for="tyc">He leído y acepto los términos y condiciones</label>
-		</br>
-		<input type="submit" value="Enviar" id="enviarID">
-	</form>
+        <footer>
+            <div id="socialLinks">
+                <a href="https://www.facebook.com/StrangerThingsTV/" target="_blank" rel="noopener noreferrer"><img src="images/icon/fbIcon.png" alt="Facebook page" /></a>
+                <a href="https://twitter.com/Stranger_Things" target="_blank" rel="noopener noreferrer"><img src="images/icon/twitterIcon.png" alt="Twitter page" /></a>
+                <a href="https://www.instagram.com/StrangerThingsTV/" target="_blank" rel="noopener noreferrer"><img src="images/icon/igIcon.png" alt="Instagram page" /></a>
+                <a href="https://www.youtube.com/c/strangerthings" target="_blank" rel="noopener noreferrer"><img src="images/icon/ytIcon.png" alt="Youtube page" /></a>
+            </div>
+            <ul>
+                <li><a href="about.html">ACERCA DE</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="sitemap.html">MAPA DE SITIO</a></li>
+            </ul>
+        </footer>
 
-    <footer>
-        <ul>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Mapa de Sitio</a></li>
-        </ul>
-    </footer>
-</body>
-</html>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "") {
+                    x.className += "responsive";
+                } else {
+                    x.className = "";
+                }
+            }
+        </script>        
+        <script src="js/lightbox-plus-jquery.js"></script>
+    </div>
+    </body>
+    </html>

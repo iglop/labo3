@@ -3,27 +3,30 @@
     margin: 0;
     box-sizing:border-box;
     font-family: 'Roboto', sans-serif;
+    font-weight:400;
     color:mistyrose;
 }
 body{
-    /*background-image:url(../images/bckg_right.jpg), url(../images/bckg_left.jpg);
-    background-position:left center, right center;
-    background-position-y:0px, 150px, 150px;
-    background-repeat: no-repeat, no-repeat;*/
-    background:linear-gradient(black 20%, transparent 40%) no-repeat top center,
-        url(../images/bckg_left.jpg) no-repeat left 100px,
-        url(../images/bckg_right.jpg) no-repeat right 100px;
     background-color:black;
     max-width:100%;
-    height:auto;
 }
-
+#background{
+    background:linear-gradient(to top, black 10%, transparent 20%) no-repeat 100%,
+               linear-gradient(black 1%, transparent 5%) no-repeat 100% 280px,
+               url(../images/bckg_left.jpg) no-repeat left 300px,
+               url(../images/bckg_right.jpg) no-repeat right 300px;
+}
+h2, h3{
+    font-weight:700;
+}
+h3{
+    color:rgb(230,32,42);
+}
 .icon {
     display:none;
 }
 a {
     text-decoration:none;
-    color:black;
 }
 .textLinks{
     color:firebrick;
@@ -40,6 +43,7 @@ header {
     justify-content:center;
     margin-left:auto;
     margin-right:auto;
+    height:300px;
 }
 #logo{
     height:300px;
@@ -72,6 +76,12 @@ nav ul li a {
     padding-bottom:1rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    font-weight:700;
+}
+nav ul li a:hover {
+    background-image:radial-gradient(ellipse at bottom, darkred -80%, transparent 75%);
+    border-bottom:1px solid #4b0000df;
+    color:linen;
 }
 
 
@@ -90,6 +100,10 @@ section#lastNews{
     width:65%;
     flex-direction:column;    
 }
+.newsTitle{
+    margin-top:2%;
+    margin-bottom:3%;
+}
 .news{
     margin-bottom:5%;
 }
@@ -99,10 +113,29 @@ section#lastNews{
 }
 
 section#lastMedia{
-    width:35%;
+    display:flex;
+    flex-direction:column;
+    width: 30%;
+    margin-left: 5%;
 }
 .lastMediaContent h3, h5{
+    margin-top:2%;
     margin-bottom:5%;
+}
+.lastMediaContent img{
+    border:2px darkred solid;
+    border-radius:10px;
+}
+section#lastMedia article{
+    padding:2%;
+}
+section#lastMediaResponsive{
+    display:none;
+}
+#imgBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 /*RESPONSIVE VIDEOS*/
@@ -126,38 +159,6 @@ section#lastMedia{
     height:100%;
 }
 
-section#lastMedia{
-    display:flex;
-    flex-direction:column;
-    width: 30%;
-    margin-left: 5%;
-}
-section#lastMedia article{
-    padding:2%;
-}
-
-/*
-section#mainNews{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-section#mainNews article{
-    padding: 2%;
-    height: 25%;
-}
-section#lastMedia{
-    width: 30%;
-    margin-left: 5%;
-}
-section#lastMedia article{
-    padding:2%;
-}
-*/
-section#lastMediaResponsive{
-    display:none;
-}
 
 
 footer {
@@ -169,12 +170,12 @@ footer {
     margin-right:auto;
     margin-top:3%;
     margin-bottom:3%;
-
-    background:lightgray;
 }
-footer ul{
+footer{
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
+    align-items:center;
+    order:1;
 }
 footer ul li {
     display: inline-block;
@@ -190,35 +191,32 @@ footer ul li a {
     padding-bottom:1rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    font-weight:700;
+}
+footer ul li a:hover {
+    background-image:radial-gradient(ellipse at top, darkred -80%, transparent 80%);
+    border-top:1px solid #4b0000df;
+    color:linen;
+}
+#socialLinks {
+    display: flex;
+    order: 2;
+    align-items: center;
+    justify-content: center;
+}
+#socialLinks a {
+    margin:20px;
+}
+#socialLinks img{
+    height:48px;
 }
 
 
-@media screen and (max-width: 1500px){
-    body{
-        background:black;
-    }
-    .icon{
-        margin-top: 5%;
-        float: right;
-        display: block;
-        background-color:red;
-    }
-    nav{
-        width: 100%;
-    }
-    nav ul{
-        display: none;
-    }
-    nav.responsive ul{
-        display: block;
-    }
-    nav.responsive ul li{
-        display: block;
-        text-align: center;
-        padding: 1rem;
-    }
-    nav.responsive ul li{
-        border:none;
+
+
+@media screen and (max-width: 1600px){
+    #background{
+        background: none;
     }
     main{
         max-width: 1000px;
@@ -242,12 +240,51 @@ footer ul li a {
 
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
+    header{
+        height:150px;
+    }
     #logo{
         height:150px;
     }
+    .icon{
+        display:flex;
+        padding:15px;
+    }
+    nav{
+        width: 100%;
+        margin-top:10px;
+        margin-bottom:10px;
+        flex-direction:column;
+        align-items:center;
+    }
+    nav ul{
+        display: none;
+    }
+    nav.responsive ul{
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        position:absolute;
+        top:254px;
+        background-color:black;
+        border-bottom:2px solid darkred;
+    }
+    nav.responsive ul li{
+        width:80%;
+        border:none;
+        text-align: center;
+        padding: 1rem;
+    }
+    nav.responsive ul li a{
+        width:80%;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
     main{
-        max-width:400px;
+        max-width:576px;
         flex-direction:column;
     }
     section#lastNews{
@@ -260,11 +297,36 @@ footer ul li a {
         display:flex;
         flex-direction:column;
     }
+    section#lastMediaResponsive h3{
+        margin-top:2rem;
+        margin-bottom:0.5rem;
+    }
+    footer{
+        border-top:2px solid darkred;
+        margin-top:50px;
+        flex-direction:row;
+    }
     footer ul{
+        display:flex;
         flex-direction:column;
+        align-items:normal;
+        width:65%;
+        margin-top:15px;
     }
     footer ul li{
         border:none;
+    }
+    #socialLinks{
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    #socialLinks a {
+        height:58px;
+        margin:7px;
+    }
+    #socialLinks img{
+        height:48px;
+        margin:5px;
     }
 
 }
