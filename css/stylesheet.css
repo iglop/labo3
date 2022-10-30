@@ -165,17 +165,14 @@ footer {
     display: flex;
     max-width:1300px;
     width:45%;
-    justify-content:center;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:3%;
-    margin-bottom:3%;
-}
-footer{
-    display:flex;
     flex-direction:column;
     align-items:center;
     order:1;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:12%;
+    margin-bottom:3%;
 }
 footer ul li {
     display: inline-block;
@@ -210,29 +207,81 @@ footer ul li a:hover {
 #socialLinks img{
     height:48px;
 }
+.info p{
+    margin-left:14%;
+    font-size:1rem;
+    margin-bottom:15px;
+}
+.highlight p{
+    color:rgb(220,10,10);
+    margin-left:7%;
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:0;
+}
+#content{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+#content form{
+    width:100%;
+}
+#content label{
+    display:block;
+    font-size:1.5rem;
+}
+#content #consultaID, #nombreID, option, input, textarea{
+    color:black;
+    font-size:1.2rem;
+    width:100%;
+    margin-top:2px;
+    margin-bottom:20px;
+}
+#content h2{
+    color:rgb(230,32,42);
+    font-size:2rem;
+    margin-bottom:20px;
+}
+#content select, #nombreID, #enviarID{
+    height:8%;
+}
+#content #enviarID{
+    margin-top:20px;
+    margin-bottom:100px;
+    height:10%;
+}
+#content .pages{
+    margin-bottom:5px;
+    margin-top:15px;
+}
+#content a p{
+    margin-bottom:15px;
+    margin-left:30px;
+    font-size:1.5rem;
+}
 
 
 
-
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1400px){
     #background{
         background: none;
     }
     main{
-        max-width: 1000px;
+        max-width: 830px;
     }
     .lastImages{
         display:none;
     }
     .news h2{
-        font-size:1.2rem;
-        margin-bottom:0.2rem;
+        font-size:2rem;
+        margin-bottom:0.4rem;
     }
     .news p{
-        font-size:0.8rem;
+        font-size:1rem;
     }
     .textLinks{
-        font-size:0.8rem;
+        font-size:1rem;
     }
     footer{
         width:100%;
@@ -240,7 +289,7 @@ footer ul li a:hover {
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 576px){
     header{
         height:150px;
     }
@@ -257,6 +306,7 @@ footer ul li a:hover {
         margin-bottom:10px;
         flex-direction:column;
         align-items:center;
+        font-size:1.7rem;
     }
     nav ul{
         display: none;
@@ -267,7 +317,7 @@ footer ul li a:hover {
         align-items:center;
         width:100%;
         position:absolute;
-        top:254px;
+        top:224px;
         background-color:black;
         border-bottom:2px solid darkred;
     }
@@ -284,8 +334,15 @@ footer ul li a:hover {
         margin-right:auto;
     }
     main{
-        max-width:576px;
+        max-width:476px;
         flex-direction:column;
+        font-size:2rem;
+    }
+    .info p{
+        margin-left:10px;
+    }
+    .highlight p{
+        margin-left:0;
     }
     section#lastNews{
         width:100%;
@@ -305,6 +362,7 @@ footer ul li a:hover {
         border-top:2px solid darkred;
         margin-top:50px;
         flex-direction:row;
+        font-size:1.7rem;
     }
     footer ul{
         display:flex;
@@ -321,12 +379,47 @@ footer ul li a:hover {
         width: 50%;
     }
     #socialLinks a {
-        height:58px;
+        height:90px;
         margin:7px;
     }
     #socialLinks img{
-        height:48px;
+        height:78px;
         margin:5px;
     }
-
+    #content{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+    #content form{
+        width:100%;
+    }
+    #content label{
+        display:block;
+        font-size:1.5rem;
+    }
+    #content #consultaID, #nombreID, option, input, textarea{
+        color:black;
+        font-size:1.2rem;
+        width:100%;
+        margin-top:2px;
+        margin-bottom:20px;
+    }
+    #content h2{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+    #content select, #nombreID, #enviarID{
+        height:8%;
+    }
+    #content #enviarID{
+        margin-top:20px;
+        margin-bottom:50px;
+        height:10%;
+    }
+    #content a p{
+        margin-bottom:5px;
+        margin-left:15px;
+        font-size:1.2rem;
+    }
 }
