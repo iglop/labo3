@@ -178,7 +178,9 @@ section#lastMediaResponsive{
     height:100%;
 }
 
-
+h1 {
+    display:none;
+}
 
 footer {
     display: flex;
